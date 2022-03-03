@@ -16,14 +16,14 @@ spec:
     spec:
       containers:
       - name: springappcontainer
-        image: dockerhandson/spring-boot-mongo
+        image: techpragna/springimages:2
         ports:
         - containerPort: 8080
         env:
         - name: MONGO_DB_USERNAME
-          value: devdb
+          value: jit
         - name: MONGO_DB_PASSWORD
-          value: devdb@123
+          value: jit@123
         - name: MONGO_DB_HOSTNAME
           value: mongo 
 ---
@@ -75,9 +75,9 @@ spec:
          - containerPort: 27017
          env:
          - name: MONGO_INITDB_ROOT_USERNAME
-           value: devdb
+           value: jit
          - name: MONGO_INITDB_ROOT_PASSWORD
-           value: devdb@123
+           value: jit@123
          volumeMounts:
          - name: pvc
            mountPath: /data/db   
